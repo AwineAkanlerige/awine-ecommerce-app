@@ -2,7 +2,7 @@ import React from 'react-dom';
 import ProCard from './ProCard';
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
-import logger from 'use-reducer-logger';
+//import logger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Helmet } from 'react-helmet-async';
