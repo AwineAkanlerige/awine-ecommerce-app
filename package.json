@@ -1,0 +1,21 @@
+{
+  "name": "ecomm",
+  "version": "1.0.0",
+  "description": "# Prototype",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../winaka && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AwineAkanlerige/ecommerce-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "git+https://github.com/AwineAkanlerige/ecommerce-app/issues"
+  },
+  "homepage": "git+https://github.com/AwineAkanlerige/ecommerce-app#readme"
+}
