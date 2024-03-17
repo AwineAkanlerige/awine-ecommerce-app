@@ -17,6 +17,7 @@ import PlaceOrderScreen from './components/PlaceOrderScreen';
 import OrderScreen from './components/OrderScreen';
 import OrderHistoryScreen from './components/orderHistoryScreen';
 import ProfileScreen from './components/ProfileScreen';
+import Navbar from './components/Navbar';
 
 //import { ToastContainer } from 'react-bootstrap';
 //import 'react-toastify/dist/ReactToastify.css';
@@ -25,9 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <header className="header">
-          <Header />
-        </header>
+          <Navbar />
         <Container className="mt-3 mb-3">
           <Routes>
             <Route path="/product/:slug" element={<ProductScreen />} />

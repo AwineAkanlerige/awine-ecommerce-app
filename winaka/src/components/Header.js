@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Badge from 'react-bootstrap/Badge';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Store } from '../Store';
 import { NavDropdown } from 'react-bootstrap';
@@ -30,6 +30,8 @@ const Header = () => {
 
 
   };
+
+
   return (
     <div className="header">
       <Navbar className="nav">
