@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { Store } from '../Store';
 import { NavDropdown } from 'react-bootstrap';
 
-const Navbar = () => {
+const NavbarMain = () => {
 
     const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
@@ -88,4 +88,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default NavbarMain;
