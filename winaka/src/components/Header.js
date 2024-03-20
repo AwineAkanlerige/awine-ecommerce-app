@@ -1,6 +1,6 @@
 import React from 'react-dom';
 import Navbar from 'react-bootstrap/Navbar';
-//import Nav from 'react-bootstrap/Nav';
+import Nav from 'react-bootstrap/Nav';
 import Badge from 'react-bootstrap/Badge';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -10,15 +10,7 @@ import { Store } from '../Store';
 import { NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
-  function showSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'flex';
-  }
-
-  function hideSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none';
-  }
+  const [isMobile, setIsMobile] = useState(false);
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
   const signoutHandler = () =>{
@@ -27,17 +19,17 @@ const Header = () => {
     localStorage.removeItem('shippingAddress');
     localStorage.removeItem('paymentMethod');
     window.location.href = '/signin';
+ 
 
 
   };
-
-
   return (
-    <div className="header">
-      <Navbar className="nav">
-        <div className="nav-right">
-          Paku Limited
-          <Link to="/cart" className="nav-link" style={{ marginLeft: '-3px' }}>
+    
+      <Navbar  className='nav navbar-default' fixed="top">
+        <Container>
+         <img src='./images/oval.jpg' alt='logo' style={{width:"40px", paddingRight: "4px"}}/>
+          <Navbar.Brand>Paku Limited</Navbar.Brand>
+          <Link to="/cart" className="nav-link" >
             Cart
             {cart.cartItems.length > 0 && (
               <Badge pill bg="danger">
@@ -49,7 +41,8 @@ const Header = () => {
             <NavDropdown
               title={userInfo.name}
               id="basic-nav-dropdown"
-              style={{ marginLeft: '-14px' }}
+              className="dropdown"
+              
             >
               <LinkContainer to="/profile">
                 <NavDropdown.Item>User Profile</NavDropdown.Item>
@@ -67,74 +60,42 @@ const Header = () => {
               </Link>
             </NavDropdown>
           ) : (
-            <Link className="nav-link" to="/signin">
+            <Link className="nav-link" to="/signin" >
               Sign In
             </Link>
           )}
-        </div>
+        
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <Nav className='me-auto w-100 justify-content-end'>
 
-        <ul
-          className="sidebar"
-          style={{
-            justifyContent: 'flex-start',
-            width: '180px',
-            display: 'none',
-          }}
-        >
-          <li onClick={hideSidebar} style={{ marginLeft: 'auto' }}>
-            <a href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 -960 960 960"
-                width="24"
-              >
-                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-              </svg>
-            </a>
+        <ul className={isMobile ? "nav-links-mobile": "nav-links"}
+        onClick={() => setIsMobile(false)}>
+        
+          <li>
+            <Link to="/" >Home</Link>
           </li>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="##">Contact</Link>
           </li>
           <li>
-            <Link to="####">Products</Link>
+            <Link to="/about" >About</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="##">Conditions</Link>
+          </li>
+          <li>
+            <Link to="##">Products</Link>
           </li>
         </ul>
-
-        <ul>
-          <li className="hideOnMobile">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="hideOnMobile">
-            <Link to="####">Products</Link>
-          </li>
-          <li className="hideOnMobile">
-            <Link to="/About">About</Link>
-          </li>
-
-          <li
-            onClick={showSidebar}
-            className="menu-button"
-            style={{ marginLeft: 'auto' }}
-          >
-          
-            <a href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 -960 960 960"
-                width="24"
-              >
-                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-              </svg>
-            </a>{' '}
-          </li>
-        </ul>
+        <button className='mobile-menu-icon' onClick={() => setIsMobile(!isMobile)}>
+          {isMobile ? <i className='fas fa-times'></i>: <i className='fas fa-bars'></i>}
+        </button>
+        </Nav>
+        </Navbar.Collapse>
+        </Container>
       </Navbar>
-    </div>
+    
   );
 };
 

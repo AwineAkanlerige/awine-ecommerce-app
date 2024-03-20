@@ -17,11 +17,17 @@ body {
   box-shadow: 0.004px 0.006px 4.4px 0.001px;
   background-color: white;
   align-items: center;
-  height: 90px;
-  position: relative;
-  margin-top: auto;
-  margin-bottom: auto;
   padding-top: 20px;
+  display: flex;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 90px;
+  
+  
+
+  
+
 
   /* padding: 1rem;  */
   /* height: 55px; */
@@ -37,86 +43,125 @@ body {
   justify-content: flex-end;
   align-items: center;
   padding-top: 20px;
+  
 }
 
-.nav-right {
+.nav-links {
   display: flex;
-  align-items: center;
-  padding-left: 20px;
+  padding-left: 10px;
   padding-top: 0;
-  width: 500px;
+  width: 550px;
+  text-decoration: none;
+  
+  
 
-  position: absolute;
 }
+.nav-links li {
+  list-style: none;
+  
+}
+
 .nav li {
-  height: 50px;
+  list-style: none;
 }
 
-.nav a {
+.nav-links a {
   text-decoration: none;
   height: 100%;
-  display: flex;
+  color: black;
   padding: 0 30px;
+  font-size: 15px;
+}
+nav a{
+  text-decoration: none;
 }
 
-.nav a:hover {
+.nav-links a:hover {
   color: #ff006a;
   cursor: pointer;
 }
 
 .nav div {
-  margin-right: auto;
+  
   align-items: center;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.425);
-  backdrop-filter: blur(5px);
-  box-shadow: 0.004px 0.006px 4.4px 0.001px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
 
-.sidebar li {
-  width: 100%;
-}
-
-.sidebar a {
-  width: 100%;
-}
-
-.menu-button {
+.mobile-menu-icon{
   display: none;
 }
 
-@media (max-width: 800px) {
-  .hideOnMobile {
+@media screen and (max-width: 800px) {
+  
+  .nav-links{
     display: none;
   }
-  .menu-button {
+  .nav-links-mobile{
     display: block;
+    position: absolute;
+    list-style: none;
+    left: 0;
+    top: 80px;
+    transition: all 0.5s ease-out;
+    width: 100%;
+    backdrop-filter: blur(7px);
+    background-color: #ff006a;
+    
   }
+  .nav-links-mobile a{
+    color: white;
+    font-size: 16px;
+  }
+
+  .nav-links-mobile a:hover {
+    color: black;
+  }
+
+  
+  
+  .home,
+  .about,
+  .contact {
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-menu-icon{
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    right: 25px;
+  }
+  
 }
+
 
 @media (max-width) {
-  .sidebar {
+  .nav-links {
     width: 100%;
+  }
+  .aboutScreen{
+    margin-top: 160px;
   }
 }
 
+.dropdown{
+  z-index: 999;
+}
+
+
+.shoppingCart{
+  margin-top: 90px;
+}
 .main {
   width: 100%;
   padding-bottom: 2.5rem;
+  
 }
 .footer {
+  
   bottom: 0;
   width: 100%;
   height: 2.5rem;
@@ -124,7 +169,8 @@ body {
   background-color: rgb(18, 17, 17);
   color: white;
   padding-top: 7px;
-  align-items: center;
+  position: fixed;
+  
 }
 
 .card-pic {
@@ -252,3 +298,44 @@ body {
   border-bottom: 0.2rem solid #ff006a;
   color: #ff006a;
 }
+
+.aboutScreen {
+  margin-top: 150px;
+}
+
+
+
+/* style */
+
+/* .nav1 {
+  box-shadow: 0.004px 0.006px 4.4px 0.001px;
+  background-color: white;
+  align-items: center;
+  
+  position: fixed;
+  padding-top: 20px;
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  
+} */
+
+/* .nav-links1{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+} */
+
+.home, .contact, .about {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.nav-link{
+  border: 1px solid black;
+  background-color: #ff006a;
+  border-radius: 5px;
+}
+
+
