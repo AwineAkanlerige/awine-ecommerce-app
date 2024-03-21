@@ -27,9 +27,9 @@ const Header = () => {
     
       <Navbar  className='nav navbar-default' fixed="top">
         <Container>
-         <img src='./images/oval.jpg' alt='logo' style={{width:"30px", paddingRight: "4px"}}/>
+         <img src='./images/oval.jpg' alt='logo' style={{width:"40px", paddingRight: "4px"}}/>
           <Navbar.Brand>Paku Limited</Navbar.Brand>
-          <Link to="/cart" className="nav-link" style={{ marginLeft: '-7px' }} >
+          <Link to="/cart" className="nav-link" style={{marginLeft: "8px"}} >
             Cart
             {cart.cartItems.length > 0 && (
               <Badge pill bg="danger">
@@ -42,8 +42,7 @@ const Header = () => {
               title={userInfo.name}
               id="basic-nav-dropdown"
               className="dropdown"
-              style={{ marginLeft: '-13px' }}
-              
+              style={{marginLeft: "-13px"}}
             >
               <LinkContainer to="/profile">
                 <NavDropdown.Item>User Profile</NavDropdown.Item>
@@ -74,19 +73,19 @@ const Header = () => {
         onClick={() => setIsMobile(false)}>
         
           <li>
-            <Link to="/" className= 'home'>Home</Link>
+            <Link to="/" >Home</Link>
           </li>
           <li>
-            <Link to="/about" className= 'about' >About</Link>
+            <Link to="##">Contact</Link>
           </li>
           <li>
-            <Link to="##" className= 'contact'>Contact</Link>
+            <Link to="/about" >About</Link>
           </li>
           <li>
-            <Link to="##" className= 'conditons'>Conditions</Link>
+            <Link to="##">Conditions</Link>
           </li>
           <li>
-            <Link to="##" className= 'products'>Products</Link>
+            <Link to="##">Products</Link>
           </li>
         </ul>
         <button className='mobile-menu-icon' onClick={() => setIsMobile(!isMobile)}>
