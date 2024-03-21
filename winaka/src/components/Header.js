@@ -74,19 +74,19 @@ const Header = () => {
         onClick={() => setIsMobile(false)}>
         
           <li>
-            <Link to="/" >Home</Link>
+            <Link to="/" className= 'home'>Home</Link>
           </li>
           <li>
-            <Link to="##">Contact</Link>
+            <Link to="/about" className= 'about' >About</Link>
           </li>
           <li>
-            <Link to="/about" >About</Link>
+            <Link to="##" className= 'contact'>Contact</Link>
           </li>
           <li>
-            <Link to="##">Conditions</Link>
+            <Link to="##" className= 'conditons'>Conditions</Link>
           </li>
           <li>
-            <Link to="##">Products</Link>
+            <Link to="##" className= 'products'>Products</Link>
           </li>
         </ul>
         <button className='mobile-menu-icon' onClick={() => setIsMobile(!isMobile)}>
