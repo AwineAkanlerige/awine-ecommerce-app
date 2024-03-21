@@ -338,4 +338,17 @@ nav a{
   border-radius: 5px;
 }
 
+.aboutScreen,
+.cartScreen,
+.homeScreen,
+.orderHistoryScreen,
+.orderScreen,
+.paymentMethodScreen,
+.placeOrderScreen,
+.shippingAdressScreen,
+.signinScreen,
+.signupScreen {
+  margin-top: 100px;
+}
+
 

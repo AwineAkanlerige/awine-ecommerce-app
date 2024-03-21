@@ -39,7 +39,7 @@ export default function CartScreen() {
     navigate('/signin?redirect=/shipping');
   }
   return (
-    <div>
+<div className='cartScreen'>
       <Helmet>
         <title>Shopping Cart</title>
       </Helmet>

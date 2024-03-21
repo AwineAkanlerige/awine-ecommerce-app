@@ -29,7 +29,7 @@ const Header = () => {
         <Container>
          <img src='./images/oval.jpg' alt='logo' style={{width:"30px", paddingRight: "4px"}}/>
           <Navbar.Brand>Paku Limited</Navbar.Brand>
-          <Link to="/cart" className="nav-link" >
+          <Link to="/cart" className="nav-link" style={{ marginLeft: '-7px' }} >
             Cart
             {cart.cartItems.length > 0 && (
               <Badge pill bg="danger">
@@ -42,6 +42,7 @@ const Header = () => {
               title={userInfo.name}
               id="basic-nav-dropdown"
               className="dropdown"
+              style={{ marginLeft: '-10px' }}
               
             >
               <LinkContainer to="/profile">
