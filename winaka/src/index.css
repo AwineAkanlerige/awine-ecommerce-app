@@ -101,11 +101,12 @@ nav a{
     position: absolute;
     list-style: none;
     left: 0;
-    top: 80px;
+    top: 50px;
     transition: all 0.5s ease-out;
     width: 100%;
     backdrop-filter: blur(7px);
     background-color: #ff006a;
+    padding: 32px;
     
   }
   .nav-links-mobile a{
@@ -139,9 +140,6 @@ nav a{
 @media (max-width) {
   .nav-links {
     width: 100%;
-  }
-  .aboutScreen{
-    margin-top: 160px;
   }
 }
 
