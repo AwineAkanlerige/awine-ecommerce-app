@@ -67,9 +67,8 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  height: 100%;
   color: black;
-  padding: 0 30px;
+  padding: 0 20px;
   font-size: 15px;
 }
 nav a{
@@ -101,7 +100,7 @@ nav a{
     position: absolute;
     list-style: none;
     left: 0;
-    top: 80px;
+    top: 75px;
     transition: all 0.5s ease-out;
     width: 100%;
     backdrop-filter: blur(7px);
@@ -125,9 +124,12 @@ nav a{
   .about,
   .conditions,
   .products {
-    padding: 10px 20px;
+    padding: 32px;
     font-size: 20px;
     margin: 0 10px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease;
   }
 
   .nav-links-mobile a:hover {
