@@ -42,7 +42,7 @@ const Header = () => {
               title={userInfo.name}
               id="basic-nav-dropdown"
               className="dropdown"
-              style={{ marginLeft: '-10px' }}
+              style={{ marginLeft: '-13px' }}
               
             >
               <LinkContainer to="/profile">

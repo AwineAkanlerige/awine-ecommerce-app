@@ -111,6 +111,10 @@ nav a{
   .nav-links-mobile a{
     color: white;
     font-size: 16px;
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease;
   }
 
   .nav-links-mobile a:hover {
@@ -119,20 +123,13 @@ nav a{
 
   
   
-  .home,
-  .about,
-  .contact {
-    text-align: center;
-    padding: 32px;
-    width: 100%;
-    transition: all 0.5s ease;
-  }
+ 
 
   .mobile-menu-icon{
     display: block;
     position: absolute;
     font-size: 20px;
-    right: 15px;
+    right: 22px;
   }
   
 }
@@ -152,9 +149,6 @@ nav a{
 }
 
 
-.shoppingCart{
-  margin-top: 90px;
-}
 .main {
   width: 100%;
   padding-bottom: 2.5rem;
