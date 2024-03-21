@@ -101,21 +101,31 @@ nav a{
     position: absolute;
     list-style: none;
     left: 0;
-    top: 50px;
+    top: 80px;
     transition: all 0.5s ease-out;
     width: 100%;
     backdrop-filter: blur(7px);
     background-color: #ff006a;
-    padding: 32px;
+    
+
     
   }
   .nav-links-mobile a{
     color: white;
     font-size: 16px;
     text-align: center;
-    padding: 32px;
+    
     width: 100%;
     transition: all 0.5s ease;
+    margin: 10px;
+  }
+
+  .home,
+  .contact,
+  .about,
+  .conditions,
+  .products {
+    padding: 32px;
   }
 
   .nav-links-mobile a:hover {
