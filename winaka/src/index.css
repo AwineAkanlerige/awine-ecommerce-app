@@ -106,7 +106,7 @@ nav a{
     width: 100%;
     backdrop-filter: blur(7px);
     background-color: #ff006a;
-    
+    opacity: 5px;
 
     
   }
@@ -125,7 +125,9 @@ nav a{
   .about,
   .conditions,
   .products {
-    padding: 32px;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 0 10px;
   }
 
   .nav-links-mobile a:hover {
