@@ -86,7 +86,7 @@ const PlaceOrderScreen = () => {
   }, [cart, navigate]);
 
   return (
-    <div>
+    <div className='placeOrderScreen'>
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <Helmet>
         <title>Preview Order</title>

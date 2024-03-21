@@ -57,7 +57,7 @@ function HomeScreen() {
   );
 
   return (
-    <>
+    <div className='homeScreen'>
       <main className="main">
         <Helmet>
           <title>Paku Limited</title>
@@ -85,7 +85,7 @@ function HomeScreen() {
           )}
         </div>
       </main>
-    </>
+    </div>
   );
 };
 export default HomeScreen;

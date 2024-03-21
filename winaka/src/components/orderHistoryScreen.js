@@ -47,7 +47,7 @@ const OrderHistoryScreen = () => {
     fetchData();
   }, [userInfo]);
   return (
-    <div>
+    <div className='orderHistoryScreen'>
       <Helmet>
         <title>Order History</title>
       </Helmet>

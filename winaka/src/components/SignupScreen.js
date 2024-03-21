@@ -51,6 +51,7 @@ export default function SignupScreen() {
     }
   }, [navigate, redirect, userInfo]);
   return (
+    <div className='signupScreen'>
     <Container className="small-container" style={{ maxWidth: '600px' }}>
       <Helmet>
         <title>Sign Up</title>
@@ -107,5 +108,6 @@ export default function SignupScreen() {
         </div>
       </Form>
     </Container>
+    </div>
   );
 }

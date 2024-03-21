@@ -58,7 +58,7 @@ const ProfileScreen = () => {
     }
   };
   return (
-    <div className="container-sm" style={{ width: '600px' }}>
+    <div className="container-sm" style={{ width: '600px', marginTop: "100px" }}>
       <Helmet>
         <title>User Profile</title>
       </Helmet>

@@ -27,7 +27,7 @@ const Header = () => {
     
       <Navbar  className='nav navbar-default' fixed="top">
         <Container>
-         <img src='./images/oval.jpg' alt='logo' style={{width:"40px", paddingRight: "4px"}}/>
+         <img src='./images/oval.jpg' alt='logo' style={{width:"30px", paddingRight: "4px"}}/>
           <Navbar.Brand>Paku Limited</Navbar.Brand>
           <Link to="/cart" className="nav-link" >
             Cart

@@ -54,7 +54,7 @@ function ShippingAddressScreen() {
     navigate('/payment');
   };
   return (
-    <div>
+    <div className='shippinAdressScreen'>
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>

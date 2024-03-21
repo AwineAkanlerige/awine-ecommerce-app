@@ -130,7 +130,7 @@ const OrderScreen = () => {
   ) : error ? (
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
-    <div>
+    <div className='orderScreen'>
       <Helmet>
         <title>Order</title>
       </Helmet>

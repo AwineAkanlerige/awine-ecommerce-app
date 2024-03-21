@@ -43,6 +43,7 @@ export default function SigninScreen() {
     }
   }, [navigate, redirect, userInfo]);
   return (
+    <div className='signinScreen'>
     <Container className="small-container" style={{ maxWidth: '600px' }}>
       <Helmet>
         <title>Sign In</title>
@@ -79,5 +80,6 @@ export default function SigninScreen() {
         </div>
       </Form>
     </Container>
+    </div>
   );
 }
