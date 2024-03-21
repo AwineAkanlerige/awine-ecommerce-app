@@ -128,8 +128,8 @@ nav a{
   .mobile-menu-icon{
     display: block;
     position: absolute;
-    font-size: 20px;
-    right: 22px;
+    font-size: 15px;
+    right: 10px;
   }
   
 }
