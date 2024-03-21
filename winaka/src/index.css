@@ -106,6 +106,7 @@ nav a{
     backdrop-filter: blur(7px);
     background-color: #ff006a;
     opacity: 5px;
+    margin-top: 30px;
 
     
   }
@@ -116,7 +117,7 @@ nav a{
     
     width: 100%;
     transition: all 0.5s ease;
-    margin: 10px;
+  
   }
 
   .home,
