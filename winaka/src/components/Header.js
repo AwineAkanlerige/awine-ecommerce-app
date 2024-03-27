@@ -89,7 +89,7 @@ const Header = () => {
           </li>
         </ul>
         <button className='mobile-menu-icon' onClick={() => setIsMobile(!isMobile)}>
-          {isMobile ? <i className='fas fa-times'></i>: <i className='fas fa-bars'></i>}
+          {isMobile ? <i className='fas fa-times'></i> : <i className='fas fa-bars'></i>}
         </button>
         </Nav>
         </Navbar.Collapse>

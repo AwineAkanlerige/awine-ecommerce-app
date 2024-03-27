@@ -67,8 +67,9 @@ body {
 
 .nav-links a {
   text-decoration: none;
+  height: 100%;
   color: black;
-  padding: 0 20px;
+  padding: 0 30px;
   font-size: 15px;
 }
 nav a{
@@ -90,8 +91,16 @@ nav a{
   display: none;
 }
 
+.admin-dropdown {
+  right: 50px;
+  color: white;
+  font-weight: bold;
+  position: fixed;
+}
+
 @media screen and (max-width: 800px) {
   
+
   .nav-links{
     display: none;
   }
@@ -100,50 +109,56 @@ nav a{
     position: absolute;
     list-style: none;
     left: 0;
-    top: 75px;
+    top: 80px;
     transition: all 0.5s ease-out;
     width: 100%;
     backdrop-filter: blur(7px);
     background-color: #ff006a;
-    opacity: 5px;
-    
-
     
   }
   .nav-links-mobile a{
     color: white;
     font-size: 16px;
-
-    
-    
-  
+    line-height: 20px;
+    font-weight: bold;
   }
 
-  .home,
-  .contact,
-  .about,
-  .conditions,
-  .products {
-    padding: 32px;
-    width: 100%;
-    text-align: center;
-    transition: all 0.5s ease;
+  .nav-links-mobile li {
+    padding: 5px;
   }
 
   .nav-links-mobile a:hover {
-    color: black;
+    color: blue;
   }
 
   
   
- 
+  .home,
+  .about,
+  .contact {
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
 
   .mobile-menu-icon{
     display: block;
     position: absolute;
     font-size: 15px;
-    right: 10px;
+    right: 20px;
+    font-variant: none;
     border: none;
+    background-color: none;
+    font-variant-ligatures: none;
+    
+  }
+
+  .dropdown {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    right: 7px;
   }
   
 }
@@ -153,12 +168,14 @@ nav a{
   .nav-links {
     width: 100%;
   }
+  .aboutScreen{
+    margin-top: 160px;
+  }
 }
 
 .dropdown{
   z-index: 999;
 }
-
 
 .main {
   width: 100%;
@@ -312,19 +329,14 @@ nav a{
 
 /* style */
 
-/* .nav1 {
-  box-shadow: 0.004px 0.006px 4.4px 0.001px;
-  background-color: white;
-  align-items: center;
-  
-  position: fixed;
-  padding-top: 20px;
-  display: flex;
-  top: 0;
+.nav2 {
+  background-color: #ff006a;
+  height: 40px;
   width: 100%;
-  height: 90px;
-  
-} */
+  margin-top: 90px;
+  display: flex;
+  align-items: flex-start;
+} 
 
 /* .nav-links1{
   display: flex;
@@ -337,23 +349,94 @@ nav a{
   font-size: 18px;
 }
 
+
+
 .nav-link{
-  border: 1px solid black;
+  border: 1px solid rgb(224, 195, 195);
   background-color: #ff006a;
   border-radius: 5px;
 }
 
-.aboutScreen,
-.cartScreen,
-.homeScreen,
-.orderHistoryScreen,
-.orderScreen,
-.paymentMethodScreen,
-.placeOrderScreen,
-.shippingAdressScreen,
-.signinScreen,
-.signupScreen {
-  margin-top: 100px;
+/* sidebar styling*/
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar{
+  width: 150px;
+  top: 30px;
+  position: absolute;
+  background-color:#ff006a;
+  color: black;
+  transition: 0.5s;
+  height: 100%;
+  position: absolute;
+  display: block;
+  flex-direction: column; /* Display items vertically */
+  left: -300px;
+  background-color: #ff006a;
+  color: black;
+  transition: 0.5s;
+  z-index: 9999;
+  align-items: center;
+  justify-content: flex-start;
+  
+  
+  
+
 }
 
+.site-container{
+  transition: 0.4s;
+}
+/* .active-cont{
+  margin-left: 240px;
+} */
+.active-nav {
+  left: 0;
+}
 
+.navItem {
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(7px);
+  transition: all 0.5s ease-out;
+  width: 150px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.side-navbar a{
+  color: #ff006a;
+}
+.nav-item a:hover {
+  color: blue;
+}
+
+.a Nav.Link:hover {
+  color: #ff006a;
+}
+
+.sidebar-icon{
+  display:flex;
+  position: relative;
+  font-size: 15px;
+}
+
+.search-box {
+  height: 40px;
+}
+
+.search-button{
+  color: black;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* SearchScreen style*/
+
+.deptFilter li  {
+font-weight: bold;
+}
