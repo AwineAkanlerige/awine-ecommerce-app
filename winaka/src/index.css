@@ -182,6 +182,10 @@ nav a{
   padding-bottom: 2.5rem;
   
 }
+
+.btn-btn-primary {
+  background-color: #ff006a;
+}
 .footer {
   
   bottom: 0;
@@ -224,9 +228,6 @@ nav a{
   color: #ffc000;
 }
 
-.btn-primary {
-  background-color: #f0c040;
-}
 
 .span {
   color: rgb(217, 12, 138);
@@ -261,6 +262,43 @@ nav a{
   background-position: center;
   animation: animate 50s ease-in-out infinite;
   position: relative;
+}
+
+/* .sliding-text{
+  bottom: 0;
+}
+
+.sliding-text h4{
+  font-size: 20px; 
+  text-align: center; 
+  color: rgb(250, 8, 149);
+
+  
+} */
+
+/* Define CSS animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply animation to the text */
+.sliding-text-container {
+  overflow: hidden; /* Hide overflowing content */
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-top: 0px;
+  
+}
+
+.sliding-text-container h4 {
+  display: inline-block; /* Make the text inline */
+  animation: slide 10s linear infinite; /* Apply animation */
+  color: #ff006a;
+  
 }
 
 @keyframes animate {
@@ -415,6 +453,7 @@ nav a{
 
 .a Nav.Link:hover {
   color: #ff006a;
+  border-bottom: 1px solid black;
 }
 
 .sidebar-icon{
@@ -439,4 +478,8 @@ nav a{
 
 .deptFilter li  {
 font-weight: bold;
+}
+
+button.thumbnail{
+  padding: 0;
 }

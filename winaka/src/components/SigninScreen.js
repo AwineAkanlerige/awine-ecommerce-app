@@ -74,7 +74,7 @@ export default function SigninScreen() {
           </Link>
         </div>
         <div className="mb-3">
-          <Button type="submit" style={{ backgroundColor: '#ff006a' }}>
+          <Button type="submit" style={{ backgroundColor: '#ff006a' }} className='btn'>
             Sign In
           </Button>
         </div>

@@ -33,7 +33,12 @@ import SearchScreen from './components/SearchScreen';
 import ProtectedRoute from './components/ProtectedRoute';
 import DashboardScreen from './components/DashboardScreen';
 import AdminRoute from './components/AdminRoute';
-
+import ProductListScreen from './components/ProductListScreen';
+import ProductEditScreen from './components/ProductEditScreen';
+import OrderListScreen from './components/OrderListScreen';
+import UserListScreen from './components/UserListScreen';
+import UserEditScreen from './components/UserEditScreen';
+import MapScreen from './components/MapScreen';
 
   
 
@@ -46,7 +51,7 @@ import AdminRoute from './components/AdminRoute';
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const { state, dispatch: ctxDispatch } = useContext(Store);
-  const { cart, userInfo } = state;
+  const { fullBox, cart, userInfo } = state;
   const signoutHandler = () =>{
     ctxDispatch({type: 'USER_SIGNOUT'});
     localStorage.removeItem('userInfo');
@@ -77,8 +82,12 @@ function App() {
       
       <div className={
       sidebarIsOpen 
-    ? 'd-flex flex-column site-container active-cont' 
-    : 'd-flex flex-column site-container'
+      ? fullBox
+              ? 'site-container active-cont d-flex flex-column full-box'
+              : 'site-container active-cont d-flex flex-column'
+            : fullBox
+            ? 'site-container d-flex flex-column full-box'
+            : 'site-container d-flex flex-column'
     }
     >
       
@@ -196,13 +205,13 @@ function App() {
               <LinkContainer to={"/admin/dashboard"}>
                 <NavDropdown.Item>Dashboard</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to={"/admin/productlist"}>
+              <LinkContainer to={"/admin/products"}>
                 <NavDropdown.Item>Products</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to={"/admin/orderlist"}>
+              <LinkContainer to={"/admin/orders"}>
                 <NavDropdown.Item>Orders</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to={"/admin/userlist"}>
+              <LinkContainer to={"/admin/users"}>
                 <NavDropdown.Item>Users</NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>
@@ -221,6 +230,10 @@ function App() {
             <ProtectedRoute>
               <ProfileScreen />
               </ProtectedRoute>} />
+              <Route path="/map" element={
+            <ProtectedRoute>
+              <MapScreen />
+              </ProtectedRoute>} />
             <Route path="/shipping" element={<ShippingAddressScreen />}></Route>
             <Route path="/payment" element={<PaymentMethodScreen />}></Route>
             <Route path="/placeorder" element={<PlaceOrderScreen />}></Route>
@@ -238,6 +251,11 @@ function App() {
             <Route path="/" element={<HomeScreen />} />
             {/* Admin Routes */}
             <Route path='/admin/dashboard' element={<AdminRoute><DashboardScreen/></AdminRoute>}></Route>
+            <Route path='/admin/orders' element={<AdminRoute><OrderListScreen/></AdminRoute>}></Route>
+            <Route path='/admin/products' element={<AdminRoute><ProductListScreen/></AdminRoute>}></Route>
+            {<Route path='/admin/users' element={<AdminRoute><UserListScreen/></AdminRoute>}></Route> }
+            <Route path='/admin/product/:id' element={<AdminRoute><ProductEditScreen/></AdminRoute>}></Route>
+            {<Route path='/admin/user/:id' element={<AdminRoute><UserEditScreen/></AdminRoute>}></Route> }
             <Route path="/about" element={<About />}></Route>
           </Routes>
         </Container>

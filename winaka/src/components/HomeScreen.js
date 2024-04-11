@@ -74,6 +74,9 @@ function HomeScreen() {
           </h3>
         </div>
         <br />
+        <div className="sliding-text-container">
+  <h4><b>25% discount off on Easter Sales!!!!</b></h4>
+</div>
         <h1>Featured products</h1>
         <div className="product-div">
           {loading ? (
@@ -86,6 +89,6 @@ function HomeScreen() {
         </div>
       </main>
     </div>
-  );
+  )
 };
 export default HomeScreen;
