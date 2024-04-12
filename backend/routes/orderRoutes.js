@@ -155,23 +155,6 @@ orderRouter.put(
       };
 
       const updatedOrder = await order.save();
-      // mailgun()
-      // .messages()
-      // .send(
-      //   {
-      //     from: 'winaka <winaka.com>',
-      //     to: `${order.user.name} <${order.user.email}>`,
-      //     subject: `New order ${order._id}`,
-      //     html: payOrderEmailTemplate(order)
-      //   },
-      //   (error, body) => {
-      //     if (error) {
-      //       console.log(error);
-      //     } else {
-      //       console.log(body);
-      //     }
-      //   }
-      // );
       res.send({ message: 'Payment of Order Confirmed', order: updatedOrder });
     } else {
       res.status(404).send({ message: 'Order Not Found' });

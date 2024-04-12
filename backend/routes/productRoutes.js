@@ -28,7 +28,20 @@ productRouter.post(
       rating: 0,
       numReviews: 0,
       description: 'sample description',
-    });
+    },
+    {
+      name: 'Baby Basket' + Date.now(),
+      slug: 'baby-basket' + Date.now(),
+      image: '/images/a11.jpg',
+      price: 70,
+      category: 'Baskets',
+      brand: 'Bolga Baskets',
+      countInStock: 7,
+      rating: 0,
+      numReviews: 0,
+      description: 'sample description'
+    },
+  );
     const product = await newProduct.save();
     res.send({ message: 'Product  Created', product});
   })
