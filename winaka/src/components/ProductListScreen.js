@@ -99,7 +99,7 @@ export default function ProductListScreen() {
                     headers: {Authorization: `Bearer ${userInfo.token}`},
                 }
             );
-            alert.success('product created successfully');
+            alert('product created successfully');
             dispatch({type: 'CREATE_SUCCESS'});
             navigate(`/admin/product/${data.product._id}`);
         } catch (err) {

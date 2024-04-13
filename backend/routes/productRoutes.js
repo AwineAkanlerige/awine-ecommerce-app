@@ -18,30 +18,18 @@ productRouter.post(
   isAdmin,
   expressAsyncHandler(async (req, res) => {
     const newProduct = new Product({
-      name: 'Large Fruit Basket' + Date.now(),
-      slug: 'large-fruit-basket' + Date.now(),
-      image: '/images/a12.jpg',
-      price: 0,
-      category: 'Baskets',
-      brand: 'Bolga Baskets',
-      countInStock: 3,
-      rating: 0,
-      numReviews: 0,
-      description: 'sample description',
-    },
-    {
-      name: 'Baby Basket' + Date.now(),
+      name: 'Baby  Basket' + Date.now(),
       slug: 'baby-basket' + Date.now(),
       image: '/images/a11.jpg',
       price: 70,
       category: 'Baskets',
       brand: 'Bolga Baskets',
-      countInStock: 7,
+      countInStock: 3,
       rating: 0,
-      numReviews: 0,
-      description: 'sample description'
-    },
-  );
+      numReviews: 7,
+      description: 'sample description',
+    }
+    );
     const product = await newProduct.save();
     res.send({ message: 'Product  Created', product});
   })
