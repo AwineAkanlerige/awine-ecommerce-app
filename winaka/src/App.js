@@ -39,6 +39,8 @@ import OrderListScreen from './components/OrderListScreen';
 import UserListScreen from './components/UserListScreen';
 import UserEditScreen from './components/UserEditScreen';
 import MapScreen from './components/MapScreen';
+import Contact from './components/Contact';
+import Condition from './components/Condition';
 
   
 
@@ -150,17 +152,15 @@ function App() {
             <Link to="/" >Home</Link>
           </li>
           <li>
-            <Link to="##">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
             <Link to="/about" >About</Link>
           </li>
           <li>
-            <Link to="##">Conditions</Link>
+            <Link to="/condition">Terms & Conditions</Link>
           </li>
-          <li>
-            <Link to="##">Products</Link>
-          </li>
+          
         </ul>
         <button variant='none' className='mobile-menu-icon' onClick={() => setIsMobile(!isMobile)}>
           {isMobile ? <i className='fas fa-times'></i> : <i className='fas fa-bars'></i>}
@@ -257,6 +257,8 @@ function App() {
             <Route path='/admin/product/:id' element={<AdminRoute><ProductEditScreen/></AdminRoute>}></Route>
             {<Route path='/admin/user/:id' element={<AdminRoute><UserEditScreen/></AdminRoute>}></Route> }
             <Route path="/about" element={<About />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/condition" element={<Condition />}></Route>
           </Routes>
         </Container>
         <Footer />
